@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/jdlogo" />
+
+    <EditText
+        android:id="@+id/search_navi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/img"
+        android:layout_margin="50dp"
+        android:drawableLeft="@drawable/search"
+        android:hint="搜索你感兴趣的内容"
+        android:paddingLeft="15dp" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/vp_navi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ll"
+        android:layout_below="@+id/search_navi" />
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="bottom"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/gllm"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:drawableTop="@drawable/gllm"
+            android:gravity="center"
+            android:text="管理栏目"
+            android:textSize="15sp" />
+        <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--            app:layout_constraintLeft_toLeftOf="parent"-->
+        <!--            app:layout_constraintRight_toLeftOf="@id/fx"-->
+        <!--            app:layout_constraintTop_toBottomOf="@id/vp_navi"-->
+
+        <TextView
+            android:id="@+id/fx"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/fxapp"
+            android:gravity="center"
+            android:text="分享APP"
+            android:textSize="15sp" />
+        <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--            app:layout_constraintLeft_toRightOf="@id/gllm"-->
+        <!--            app:layout_constraintRight_toLeftOf="@id/yjfk"-->
+        <!--            app:layout_constraintTop_toBottomOf="@id/vp_navi"-->
+
+        <TextView
+            android:id="@+id/yjfk"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/yjfk"
+            android:gravity="center"
+            android:text="意见反馈"
+            android:textSize="15sp" />
+        <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--            app:layout_constraintLeft_toRightOf="@id/fx"-->
+        <!--            app:layout_constraintRight_toRightOf="parent"-->
+        <!--            app:layout_constraintTop_toBottomOf="@id/vp_navi"-->
+    </LinearLayout>
+</RelativeLayout>
